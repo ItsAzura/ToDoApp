@@ -9,7 +9,9 @@ import androidx.room.RoomDatabase
     version = 1 //chỉ phiên bản schema của database
 )
 
+//là abstract class kế thừa từ RoomDatabase, khai báo TodoDao.
+
 abstract class TodoDatabase: RoomDatabase() { //kế thừa từ RoomDatabase
 
-    abstract val dao: TodoDao //dao trả về đối tượng TodoDao để truy vấn và thao tác với dữ liệu Todo
+    abstract val dao: TodoDao //dao trả về đối tượng từ class TodoDao để truy vấn và thao tác với dữ liệu Todo
 }

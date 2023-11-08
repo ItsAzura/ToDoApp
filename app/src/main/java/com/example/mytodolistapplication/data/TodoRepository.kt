@@ -2,9 +2,9 @@ package com.example.mytodolistapplication.data
 
 import kotlinx.coroutines.flow.Flow
 
-//interface TodoRepository cung cấp các phương thức để truy xuất dữ liệu todo từ các nguồn dữ liệu khác nhau (local, remote).
+//là interface định nghĩa các phương thức để truy xuất dữ liệu todo từ nhiều nguồn khác nhau.
 interface TodoRepository {
-
+    //cung cấp interface để truy xuất dữ liệu todo.
     suspend fun insertTodo(todo: Todo)
 
     suspend fun deleteTodo(todo: Todo)

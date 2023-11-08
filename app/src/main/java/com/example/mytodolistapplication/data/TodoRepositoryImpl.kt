@@ -2,13 +2,13 @@ package com.example.mytodolistapplication.data
 
 import kotlinx.coroutines.flow.Flow
 
-//implementation của TodoRepository
-//sử dụng TodoDao để truy xuất dữ liệu Todo từ database.
+//implement TodoRepository, sử dụng TodoDao để lấy dữ liệu todo từ database.
+
 class TodoRepositoryImpl(
     private val dao: TodoDao
     //nhận TodoDao qua constructor để sử dụng
 ): TodoRepository {
-
+    //TodoRepositoryImpl implement TodoRepository và sử dụng TodoDao để thực thi các phương thức CRUD.
     override suspend fun insertTodo(todo: Todo) {
         dao.insertTodo(todo)
     }
